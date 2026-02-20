@@ -74,7 +74,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: #cccccc;
+  background: linear-gradient(180deg, #3d3550 0%, #2d2540 100%);
   position: relative;
   width: 100%;
   overflow-x: auto;
@@ -293,7 +293,7 @@
 
 .section-header p {
   font-size: 14px;
-  color: #cccccc;
+  color: rgba(255, 255, 255, 0.88);
   margin: 0;
   font-weight: 500;
 }
@@ -1746,6 +1746,150 @@
   margin-bottom: 1.5rem;
 }
 
+.config-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.backup-password-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.backup-password-row .config-input {
+  flex: 1;
+  max-width: 320px;
+}
+
+.backup-scope-options {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.backup-scope-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #374151;
+}
+
+.backup-scope-option input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.backup-tables-select {
+  margin-top: 0.75rem;
+}
+
+.backup-tables-select .config-input {
+  width: 100%;
+  max-width: 400px;
+}
+
+.backup-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.backup-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  background: #fafafa;
+}
+
+.backup-list-item:last-child {
+  border-bottom: none;
+}
+
+.backup-list-name {
+  font-weight: 600;
+  color: #1f2937;
+  flex: 1;
+  min-width: 0;
+}
+
+.backup-list-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.backup-info {
+  margin: 0.5rem 0;
+  color: #1f2937;
+  font-size: 0.9rem;
+}
+
+.backup-info.muted {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.ip-security-option {
+  border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ip-security-option:last-of-type {
+  border-bottom: none;
+}
+
+.ip-security-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.35rem;
+}
+
+.ip-security-label input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.ip-list-editor {
+  margin-top: 0.75rem;
+}
+
+.ip-list-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.ip-input {
+  flex: 1;
+  max-width: 280px;
+}
+
+.config-btn.small {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+}
+
 .config-form-group label {
   display: flex;
   align-items: center;
@@ -2870,6 +3014,97 @@
   font-size: 0.65rem;
   word-break: break-all;
   font-weight: 500;
+}
+
+/* User Activity tab */
+.activity-logs-actions {
+  margin-bottom: 1rem;
+}
+
+.activity-user-name {
+  display: block;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.activity-user-email {
+  display: block;
+  font-size: 0.7rem;
+  color: #6b7280;
+  margin-top: 0.15rem;
+}
+
+.activity-type-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.activity-type-badge.type-login {
+  background: rgba(34, 197, 94, 0.2);
+  color: #15803d;
+}
+
+.activity-type-badge.type-logout {
+  background: rgba(239, 68, 68, 0.2);
+  color: #b91c1c;
+}
+
+.activity-type-badge.type-payout {
+  background: rgba(59, 130, 246, 0.2);
+  color: #1d4ed8;
+}
+
+.activity-device-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.activity-device-badge.device-web {
+  background: rgba(107, 114, 128, 0.2);
+  color: #374151;
+}
+
+.activity-device-badge.device-tablet {
+  background: rgba(168, 85, 247, 0.2);
+  color: #6b21a8;
+}
+
+.activity-device-badge.device-mobile {
+  background: rgba(245, 158, 11, 0.2);
+  color: #b45309;
+}
+
+.admin-loading-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 0.75rem;
+}
+
+.admin-loading-inline p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.no-data-message {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.pagination-total {
+  margin-left: 0.5rem;
+  color: #6b7280;
+  font-size: 0.8rem;
 }
 
 .loading-container {
